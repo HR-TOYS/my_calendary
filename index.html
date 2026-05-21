@@ -238,7 +238,13 @@ function renderCalendar(){
         td.colSpan=span;
         const btn=document.createElement("button");
         btn.className="book "+colorForMeeting(booked.title);
-        btn.innerHTML=booked.title+(booked.kind==="recurring"?" <span class='recurring-mark'>↻</span>":"");
+        btn.textContent=booked.title;
+        if(booked.kind==="recurring"){
+          const mark=document.createElement("span");
+          mark.className="recurring-mark";
+          mark.textContent=" ↻";
+          btn.appendChild(mark);
+        }
         btn.title=dayLabel(day)+" "+t+"–"+end+" — "+booked.title+" ("+(booked.kind==="recurring"?"регулярная":"разовая")+")";
         btn.onclick=(event)=>toggleBooking(di,slotFromMergedClick(event,slot,span));
         td.appendChild(btn);tr.appendChild(td);return
