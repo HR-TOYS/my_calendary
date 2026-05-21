@@ -42,7 +42,7 @@ const FIXED_COLORS=["f-indigo","f-emerald","f-sky","f-pink","f-amber","f-violet"
 const WEEKDAYS=["Понедельник","Вторник","Среда","Четверг","Пятница","Суббота","Воскресенье"];
 let fixedEvents={0:[{start:"08:30",end:"09:30",title:"Планёрка найм АТП",cls:FIXED_COLORS[0]}],1:[{start:"08:30",end:"09:30",title:"Планёрка адаптация",cls:FIXED_COLORS[1]},{start:"09:30",end:"10:30",title:"Планёрка найм офис",cls:FIXED_COLORS[2]}],2:[{start:"08:30",end:"09:30",title:"Планёрка найм АТП",cls:FIXED_COLORS[0]}],3:[{start:"08:30",end:"09:30",title:"Планёрка найм офис",cls:FIXED_COLORS[2]}],4:[{start:"14:00",end:"15:00",title:"WELCOME",cls:FIXED_COLORS[3]}]};
 let bookingsByWeek={},recurringBookings={},meetingColors={},selectedMeetingTitle="",bookingMode="one-time",pendingDelete=null,weekOffset=0,isAdmin=false;
-const slots=Array.from({length:19},(_,i)=>480+i*30);
+const slots=Array.from({length:21},(_,i)=>540+i*30);
 
 const firebaseConfig={
   apiKey:"AIzaSyALmU4nn3BJuo8yykbgmfbQ-kafRN23VM4",
